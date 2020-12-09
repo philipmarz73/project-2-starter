@@ -36,3 +36,21 @@ Confirm all this works.Then . . .
 4. Modify 'config.json' file with database name and password (for development).
 5. Create a basic model.
 6. Update the server by requiring db, and synching before server start.
+
+## Deploy Steps
+1. Run 'heroku create'
+2. Provision JawsDB on Heroku
+3. Change config.json for production to use an environment variable
+(provided by JawsDB on Heroku)
+
+
+## Expand Views and API Routes
+
+## TODOS:
+
+- POST Routes for Models OR Seed Data
+- Create a view that accepts data from the
+database.
+- Abstaract routes into separate controllers
+- DEPLOY!!!
+
