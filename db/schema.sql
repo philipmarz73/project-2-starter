@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS wolfram_db;
+CREATE DATABASE wolfram_db;
