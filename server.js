@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Configure express-handlebars
-app.engine("handlebars", exphbs({ defaultLayout: "main"})
+app.engine("handlebars", exphbs({ defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 // ROUTES

@@ -43,7 +43,12 @@ Confirm all this works.Then . . .
 3. Change config.json for production to use an environment variable
 (provided by JawsDB on Heroku)
 
-
+```javascript
+"production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  }
+  ```
 ## Expand Views and API Routes
 
 ## TODOS:
