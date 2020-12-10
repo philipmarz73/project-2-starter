@@ -34,8 +34,8 @@ app.get("/api/config", (req, res) => {
 app.post("/api/test", (req, res) => {
     console.log(req.body);
 });
-
-db.sequelize.synch().then(() => {
+db.sequelize.sync({force: true}).then(() => {
+//db.sequelize.synch().then(() => {
         app.listen(PORT, () => {
             console.log('App is running on http://localhost:${PORT}');
         });
