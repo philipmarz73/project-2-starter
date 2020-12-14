@@ -23,6 +23,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "handlebars": "^4.7.6",
+    "materialize": "^1.0.0",
     "mysql2": "^2.2.5",
     "sequ": "^0.1.7",
     "sequelize": "^6.3.5"

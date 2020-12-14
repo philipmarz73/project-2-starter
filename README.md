@@ -48,7 +48,22 @@ Confirm all this works.Then . . .
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
-  ```
+```
+
+## Allow Insecure Prototype Access for Handlebars
+Handlebars restricts access to objects that come directly from the database.
+To get around this, we must allow insecure prototype access.
+
+1. Run 'npm install handlebars @handlebars/allow-prototype-access'
+2. Require the two new packages.
+3. Update the app engine as follows:
+
+```javascript
+    app.engine("handlebars", exphbs({ defaultLayout: "main",
+    handlebars: allowInsecurePrototypeAccess(handlebars),
+   })
+);
+```
 ## Expand Views and API Routes
 
 ## TODOS:
@@ -58,4 +73,15 @@ Confirm all this works.Then . . .
 database.
 - Abstaract routes into separate controllers
 - DEPLOY!!!
+
+## CRUD
+
+### POST
+- Form
+- Form Fields
+- View from Handlebars
+- View route tp serve up the form
+- jQuery implementation to send data
+- Already have the post route
+- Something needs to happen after we successfully create a new player.
 
