@@ -5,6 +5,8 @@ const db = require("../models");
 
 router.get("/players", (req, res) => {
     db.Player.findAll({})
+        include: db.game,
+})
     .then((allPlayers) => {
         console.log(allPlayers);
         res.render("players", { players: allPlayers });
@@ -28,5 +30,19 @@ router.post("/api/players"), (req, res) => {
         }));
 };
 
+router.delete("/api/players/:id", (req, res) => {
+    db.Player.destroy({
+        where: {
+            id: req.params.id,
+        },
+    })
+        .then((response) => {
+            console.log(response);
+            res.json(response);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+});
 
 module.exports = router;
