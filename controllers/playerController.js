@@ -20,6 +20,12 @@ router.get("/player/new", (req, res) => {
     res.render("new-player");
 })
 
+router.get("/players/:id/edit", (req, res) => {
+    res.render("edit-player");
+});
+
+
+
 router.post("/api/players"), (req, res) => {
     db.Player.create(req.body)
         .then((newPlayer) => {
