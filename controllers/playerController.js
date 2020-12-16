@@ -21,10 +21,20 @@ router.get("/player/new", (req, res) => {
 })
 
 router.get("/players/:id/edit", (req, res) => {
-    res.render("edit-player");
+    db.Player.findOne({
+        where: {
+            id: req.params.id,
+        },
+    }).then((foundPlayer) => {
+        console.log(foundPlayer.email);
+        res.render("edit-player", {
+            email: foundPlayer.email,
+            password: foundPlayer.password,
+            firstName: foundPlayer.firstName,
+            lastName: foundPlayer.lastName,
+        };
+    });
 });
-
-
 
 router.post("/api/players"), (req, res) => {
     db.Player.create(req.body)

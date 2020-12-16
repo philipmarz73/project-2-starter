@@ -4,7 +4,8 @@
             {{#each players}}
             <h1>{{firstName}} {{lastName}}</h1>
             <p>Reach me at: {{email}} or {{phone}}</p>
-            <button class="btn btn-danger delete-player" data-id="{{id}}">Delete</button>"
+            <button class="btn btn-danger delete-player" data-id="{{id}}">Delete</button>
+            <a href="/players/{{id}}/edit"><button class="btn-btn-secondary">Edit</button>
             {{/each}}
         </div>
     </div>
